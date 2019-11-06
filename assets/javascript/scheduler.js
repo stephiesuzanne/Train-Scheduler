@@ -4,18 +4,16 @@ var index = 0;
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyAPIV6SiCeNXPntgsGRb8ztdh8MJHZInpE",
-    authDomain: "train-scheduler-c4362.firebaseapp.com",
-    databaseURL: "https://train-scheduler-c4362.firebaseio.com",
-    projectId: "train-scheduler-c4362",
-    storageBucket: "train-scheduler-c4362.appspot.com",
-    messagingSenderId: "360500537231",
-    appId: "1:360500537231:web:9246acb0f1e18a3c824dfa",
-    measurementId: "G-4HXVVVFRTK"
+    apiKey: "AIzaSyD4ontDwOITKT0ywET-3wFhRddTjnXQC70",
+    authDomain: "train-schedule-82269.firebaseapp.com",
+    databaseURL: "https://train-schedule-82269.firebaseio.com",
+    projectId: "train-schedule-82269",
+    storageBucket: "train-schedule-82269.appspot.com",
+    messagingSenderId: "560140196944",
+    appId: "1:560140196944:web:6445ca84b108d923358555"
   };
 
-  firebase.initializeApp(config);
-  firebase.analytics();
+  firebase.initializeApp(firebaseConfig);
 
 
 
