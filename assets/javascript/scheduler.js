@@ -27,13 +27,13 @@ $("#formID").on("submit", function (event) {
 
     var name = $("#provider").val().trim();
     var destination = $("#trainDestination").val().trim();
-    var firstTime = $("#firstDeparture").val().trim();
+    var firstDeparture= $("#firstDeparture").val().trim();
     var frequency = $("#frequency").val().trim();
 
     database.ref().push({
       name: name,
       destination: destination,
-      firstTime: firstTime,
+      firstDeparture: firstDeparture,
       frequency: frequency
     });
 
@@ -52,19 +52,19 @@ database.ref().orderByChild("dateAdded").on("child_added", function (childSnapsh
 
   var firstTime = childSnapshot.val().firstTime;
   var tFrequency = parseInt(childSnapshot.val().frequency);
-  var firstTrain = moment(firstTime, "HH:mm").subtract(1, "years");
-  console.log(firstTrain);
+  var firstDeparture = moment(firstTime, "HH:mm").subtract(1, "years");
+  console.log(firstDeparture);
   console.log(firstTime);
   var currentTime = moment();
   var currentTimeCalc = moment().subtract(1, "years");
-  var diffTime = moment().diff(moment(firstTrain), "minutes");
+  var diffTime = moment().diff(moment(firstDeparture), "minutes");
   var tRemainder = diffTime%tFrequency;
   var minutesRemaining = tFrequency - tRemainder;
   var nextTRain = moment().add(minutesRemaining, "minutes").format ("hh:mm A");
-  var beforeCalc = moment(firstTrain).diff(currentTimeCalc, "minutes");
+  var beforeCalc = moment(firstDeparture).diff(currentTimeCalc, "minutes");
   var beforeMinutes = Math.ceil(moment.duration(beforeCalc).asMinutes());
 
-  if ((currentTimeCalc - firstTrain) < 0) {
+  if ((currentTimeCalc - firstDeparture) < 0) {
     nextTrain = childSnapshot.val().firstTime;
     console.log("Before First Train");
     minutesRemaining = beforeMinutes;
