@@ -9,14 +9,18 @@
   color: red;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: whitesmoke;
+  font-family: Papyrus, fantasy; 
 }
+
 
 body {
 background-color: white;
+font-family: Papyrus, fantasy; 
+background-image: url("https://images.unsplash.com/photo-1485712367044-49e50ee1b50a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
 }
 
 .panel-heading {
-background-color: blue;
+background-color:red;
 }
 
 .panel > .panel-heading {
@@ -28,9 +32,10 @@ background-color: blue;
 #submit {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+  background-color: red;
 }
 
 #submit:hover {
-  background-color:red; 
+  background-color:blue; 
   color: white;
 }
