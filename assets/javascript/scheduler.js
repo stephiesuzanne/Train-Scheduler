@@ -1,24 +1,33 @@
 // Initialize Firebase
 var index = 0;
 
-var config = {
-  apiKey: "AIzaSyANx2eNT575hmMOsw5CVY1w0zpYscay-qU",
-  authDomain: "trainproject-8d2fb.firebaseapp.com",
-  databaseURL: "https://trainproject-8d2fb.firebaseio.com",
-  projectId: "trainproject-8d2fb",
-  storageBucket: "",
-  messagingSenderId: "533164757715"
-};
-firebase.initializeApp(config);
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAPIV6SiCeNXPntgsGRb8ztdh8MJHZInpE",
+    authDomain: "train-scheduler-c4362.firebaseapp.com",
+    databaseURL: "https://train-scheduler-c4362.firebaseio.com",
+    projectId: "train-scheduler-c4362",
+    storageBucket: "train-scheduler-c4362.appspot.com",
+    messagingSenderId: "360500537231",
+    appId: "1:360500537231:web:9246acb0f1e18a3c824dfa",
+    measurementId: "G-4HXVVVFRTK"
+  };
+
+  firebase.initializeApp(config);
+  firebase.analytics();
+
+
+
 
 var database = firebase.database();
 
 $("#formID").on("submit", function (event) {
     event.preventDefault();
 
-    var name = $("#trainName").val().trim();
+    var name = $("#provider").val().trim();
     var destination = $("#trainDestination").val().trim();
-    var firstTime = $("#firstTrainTime").val().trim();
+    var firstTime = $("#firstDeparture").val().trim();
     var frequency = $("#frequency").val().trim();
 
     database.ref().push({
@@ -28,9 +37,9 @@ $("#formID").on("submit", function (event) {
       frequency: frequency
     });
 
-    $("#trainName").val("");
+    $("#provider").val("");
     $("#trainDestination").val("");
-    $("#firstTrainTime").val("");
+    $("#firstDeparture").val("");
     $("#frequency").val("");
 
     return false;

@@ -1,0 +1,37 @@
+.jumbotron {
+    background: url('backgroundimage.jpg') no-repeat center center fixed;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: red;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: whitesmoke;
+  }
+
+body {
+	background-color: white;
+}
+
+.panel-heading {
+	background-color: blue;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #ddd;
+    color: red;
+
+}
+#submit {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
+  #submit:hover {
+    background-color:red; /* Green */
+    color: white;
+  }
+  ...

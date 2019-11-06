@@ -17,19 +17,18 @@
 	
 	<div class="container">
 		<br>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="jumbotron text-center">
-					<h1><span class="glyphicon glyphicon-road"></span> Train Schedule</h1>
-				</div>
-			</div>
+		<div class="jumbotron text-center"  style="background-image: url(https://images.unsplash.com/photo-1505832018823-50331d70d237?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1082&q=80">
+			<h1>Train Schedule</h1>
+			<!-- <p class="lead">Your message here</p>
+			<p><a href="http://www.YourLinkHere.com" class="btn btn-primary btn-lg">Learn more &raquo;</a></p> -->
 		</div>
+		
 
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">Current Train Schedule</h3>
+						<h3 class="panel-title">Train Schedule</h3>
 					</div>
 					<div class="panel-body">
 						<div id="content">
@@ -37,7 +36,7 @@
 								<thead>
 									<tr>
 										<th>Update</th>
-										<th>Train Name</th>
+										<th>Service Provider</th>
 										<th>Destination</th>
 										<th>Frequency (min)</th>
 										<th>Next Arrival</th>
@@ -62,19 +61,19 @@
 					<div class="panel-body">
 						<form id="formID">
 						  <div class="form-group">
-						    <label for="trainName">Train Name</label>
-						    <input type="text" class="form-control" id="trainName" aria-describedby="trainName" placeholder="">
+						    <label for="provider">Service Provider</label>
+						    <input type="text" class="form-control" id="provider" aria-describedby="provider" placeholder="">
 						  </div>
 						  <div class="form-group">
 						    <label for="trainDestination">Destination</label>
 						    <input type="text" class="form-control" id="trainDestination" aria-describedby="trainDestination" placeholder="">
 						  </div>
 						  <div class="form-group">
-						    <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
-						    <input type="text" class="form-control" id="firstTrainTime" aria-describedby="firstTrainTime" placeholder="">
+						    <label for="firstDeparture">First Train Departure (24 Hour Clock/Military Time)</label>
+						    <input type="text" class="form-control" id="firstDeparture" aria-describedby="firstDeparture" placeholder="">
 						  </div>
 						  <div class="form-group">
-						    <label for="frequency">Frequency (min)</label>
+						    <label for="frequency">Train Frequency in Minutes</label>
 						    <input type="number" class="form-control" id="frequency" aria-describedby="frequency" placeholder="">
 						  </div>
 						  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
